@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="fascontacpage.Page2">
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="40" />
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="100"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <BoxView BackgroundColor="Gray"
+                         HeightRequest="60"
+                         Grid.ColumnSpan="2"
+                         Grid.Row="0" />
+                <Label Text="Name"
+                       FontSize="25"
+                       TextColor="DarkGray"
+                       Grid.ColumnSpan="2"
+                       Grid.Row="0"
+                       VerticalOptions="EndAndExpand"
+                       Padding="10" />
+                <Label Text="First name"
+                       FontSize="30"
+                       Grid.Column="0"
+                       Grid.Row="1" />
+                <Label Text="Last name"
+                       FontSize="30"
+                       Grid.Column="0"
+                       Grid.Row="2" />
+                <BoxView BackgroundColor="Gray"
+                         HeightRequest="60"
+                         Grid.ColumnSpan="2"
+                         Grid.Row="3" />
+                <Label Text="CONTACT"
+                       FontSize="25"
+                       TextColor="DarkGray"
+                       Grid.ColumnSpan="2"
+                       Grid.Row="3"
+                       VerticalOptions="EndAndExpand"
+                       Padding="10" />
+                <Label Text="Phone"
+                       FontSize="30"
+                       Grid.Column="0"
+                       Grid.Row="4" />
+                <Label Text="Email"
+                       FontSize="30"
+                       Grid.Column="0"
+                       Grid.Row="5" />
+                <BoxView BackgroundColor="Gray"
+                         HeightRequest="60"
+                         Grid.ColumnSpan="2"
+                         Grid.Row="6" />
+                <Label Text="OTHER"
+                       FontSize="25"
+                       TextColor="DarkGray"
+                       Grid.ColumnSpan="2"
+                       Grid.Row="6"
+                       VerticalOptions="EndAndExpand"
+                       Padding="10" />
+                <Label Text="BLOCKED"
+                       FontSize="30"
+                       Grid.Column="0"
+                       Grid.Row="7" />
+                <Button Text="Save"
+                        TextColor="Blue"
+                        FontSize="20"
+                        Grid.Row="8"
+                        Grid.ColumnSpan="2"
+                        Clicked="Button_Clicked" />
+                <Entry  Grid.Column="1"
+                        Grid.Row="2"
+                        x:Name="firstname1" />
+                <Entry  Grid.Column="1"
+                        Grid.Row="1"
+                        x:Name="lastname1" />
+                <Entry  Grid.Column="1"
+                        Grid.Row="4"
+                        x:Name="phone1" />
+                <Entry  Grid.Column="1"
+                        Grid.Row="5"
+                        x:Name="mail1" />
+                <Switch IsToggled="false"
+                        HorizontalOptions="Center"
+                        VerticalOptions="CenterAndExpand"
+                        Grid.Column="1"
+                        Grid.Row="7" />
+                <ListView x:Name="ProductsView"
+                          Grid.ColumnSpan="2"
+                          Grid.Row="9">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout>
+                                    <Label Text="{Binding firstname}" />
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </Grid>
+        </ScrollView>
+        
+    </ContentPage.Content>
+</ContentPage>
